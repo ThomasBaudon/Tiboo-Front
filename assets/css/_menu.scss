@@ -1,0 +1,275 @@
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .desktop-nav, .mobile-nav{
+        margin-top: 1rem;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+
+        .logo-container{
+            a{
+                display: flex;
+                text-decoration: none;
+                color: var(--violet);
+            }
+        }
+        nav{
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            a{
+                display: flex;
+                text-decoration: none;
+                color: var(--violet);
+            }
+            ul{
+                display: flex;
+                li{
+                    margin-right: 2.4rem;
+                    
+                    a{
+                        position: relative;
+                        font-family: 'Nunito';
+                        font-style: normal;
+                        font-weight: 900;
+                        font-size: 1.2rem;
+                        line-height: 120%;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        color: var(--gray);
+                        transition: .3s;
+    
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            bottom: -.35rem;
+                            width: 0%;
+                            height: 1px;
+                            transform: translateX(-50%);
+                            transition: .3s;
+                            background-color: var(--violet);
+                        }
+    
+                        &:hover{
+                            color: var(--violet);
+                            transition: .3s;
+                            &::after{
+                                width: 100%;
+                                transition: .3s;
+                            }
+                        }
+                    }
+    
+                }
+            }
+    
+            .connexion-btn-header{
+                border: 1px solid var(--violet);
+                border-radius: 1.6rem;
+                background-color: var(--white);
+                padding: .8rem 1.6rem;
+                transition: .3s;
+                svg{
+                    height: 1.4rem;
+                    width: auto;
+                    margin-right: .8rem;
+    
+                    g{
+                        path{
+                            fill: var(--violet);
+                        }
+                    }
+                }
+                p{
+                    font-family: 'Nunito';
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 1.2rem;
+                    line-height: 120%;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: var(--violet);
+                    transition: .3s;
+                }
+    
+                &:hover{
+                    background-color: var(--violet);
+                    transition: .3s;
+                    svg{
+                        g{
+                            path{
+                                fill: var(--white);
+                            }
+                        }
+                    }
+                    p{
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+    }
+
+    .mobile-nav{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px){
+   
+    header{
+        .desktop-nav{
+            width: 97%;
+            nav{
+                ul{
+                    li{
+                        margin-right: 2.2rem;
+                        a{
+                            font-size: 1.2rem;
+                        }
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                    }
+                }
+    
+                .connexion-btn-header{
+                    svg{
+                        height: 1.2rem;
+                    }
+                    p{
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px){
+    header{
+
+        .desktop-nav{
+            display: none;
+        }
+
+        .mobile-nav{
+            margin-top: 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            z-index: 100;
+        
+            .logo-container{
+                width: 97%;
+                margin-top: 1.2rem;
+                position: relative;
+                z-index: 101;
+                a{
+                    img{
+                        height: 5rem;
+                    }
+                }
+            }
+        
+            .menu-mobile{
+                position: absolute;
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                opacity: 0;
+                visibility: hidden;      
+                
+                background-color: var(--white);
+                
+                nav{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    ul{
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 2rem;
+
+                        li{
+                            a{
+                                font-size: 2rem;
+                                &::after{
+                                    display: none;
+                                }
+                            }
+                            .connexion-btn-header{
+                                border: 1px solid var(--violet);
+                                border-radius: 1.6rem;
+                                background-color: var(--white);
+                                padding: .8rem 1.6rem;
+                                transition: .3s;
+
+                                font-family: 'Nunito';
+                                font-style: normal;
+                                font-weight: 900;
+                                font-size: 2rem;
+                                line-height: 120%;
+                                text-transform: uppercase;
+                                text-decoration: none;
+                                color: var(--violet);
+                                transition: .3s;
+
+                                svg{
+                                    height: 2rem;
+                                    width: auto;
+                                    margin-right: .8rem;
+                    
+                                    g{
+                                        path{
+                                            fill: var(--violet);
+                                        }
+                                    }
+                                }
+                    
+                                &:hover{
+                                    background-color: var(--violet);
+                                    color: var(--white);
+                                    transition: .3s;
+                                    svg{
+                                        g{
+                                            path{
+                                                fill: var(--white);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+        
+            }
+        }
+    }    
+    
+    .show{
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateX(0);
+    }
+
+
+}

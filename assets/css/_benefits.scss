@@ -1,0 +1,144 @@
+.benefits {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    &__container {
+        width: 65%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.6rem;
+
+        &__benefit {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--violet);
+            border-radius: .8rem;
+            // padding: 2rem;
+
+            transition: .3s;
+
+            width: 25%;
+            min-height: 22rem;
+
+            img {
+                height: 5.2rem;
+                margin-bottom: 1.6rem;
+            }
+
+            h4 {
+
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 2rem;
+                line-height: 120%;
+                text-align: center;
+                text-transform: uppercase;
+                color: var(--white);
+                margin-bottom: 1rem;
+
+            }
+
+            p {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1.4rem;
+                line-height: 129%;
+                text-align: center;
+                color: var(--white);
+
+                width: 90%;
+
+                margin-bottom: 1.6rem;
+            }
+
+            button {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: .8rem 1.6rem;
+                gap: 10px;
+
+                width: 70%;
+
+                background: var(--white);
+                border-radius: 3.2rem;
+                border: none;
+
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 1.2rem;
+                line-height: 100%;
+                text-align: center;
+                text-transform: uppercase;
+
+                color: var(--violet);
+
+            }
+
+            // &:hover{
+            //     transform: scale(1.025);
+            //     transition: .3s;
+            // }
+        }
+    }
+
+    .efficacite{
+        background-color: var(--orange);
+        button{
+            color: var(--orange);
+        }
+    }
+
+    .serenite{
+        background-color: var(--jaune);
+        button{
+            color: var(--jaune);
+        }
+    }
+
+    .adapte{
+        background-color: var(--light-violet);
+        button{
+            color: var(--light-violet);
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .benefits {
+        &__container {
+            width: 80%;
+        }
+    }
+}
+@media screen and (max-width: 960px) {
+    .benefits {
+        margin-top: 1.6rem;
+        &__container {
+            width: 97%;
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .benefits {
+        margin-top: 1.6rem;
+        &__container {
+            width: 95%;
+            flex-direction: column;
+            &__benefit{
+                width: 100%;
+            }
+        }
+    }
+}

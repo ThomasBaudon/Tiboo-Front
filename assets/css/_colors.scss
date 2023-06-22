@@ -1,0 +1,26 @@
+:root{
+
+    --gray: hsl(0, 0%, 28%);
+    --violet: hsl(288, 41%, 40%);
+    --light-violet:hsl(302, 22%, 69%);
+    --rose: hsl(308, 74%, 83%);
+    --blue:hsl(223, 50%, 72%);
+    --dark-blue: hsl(222, 23%, 37%);
+    --light-blue:hsl(201, 100%, 97%);
+    --orange: hsl(10, 82%, 66%);
+    --jaune: hsl(35, 93%, 71%);
+    --light-yellow: hsl(43, 100%, 96%);
+    --vert:hsl(101, 50%, 72%);
+    --dark-white: #f5f5f5;
+    --white: #fff;
+    --red: red;
+
+}
+
+.violet{
+    color: var(--violet);
+}
+
+.dark-blue{
+    color: var(--dark-blue);
+}
