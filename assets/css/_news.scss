@@ -1,0 +1,160 @@
+.news{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container{
+        width: 80% ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+
+        padding: 6.4rem 0;
+
+
+        h3{
+            color: var(--dark-blue);
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        &__details{
+            width: 80% ;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            gap: 1rem;
+
+            .news-card{
+                width: 25%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                
+                border-radius: .8rem;
+                overflow: hidden;
+
+                background-color: var(--dark-white);
+                
+                img{
+                    width: 100%;
+                    height: 20rem;
+                    object-fit: cover;
+                }
+                &__body{
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+
+                    padding: 2rem;
+
+                    gap: 1.6rem;
+    
+                    h5{
+                        color: var(--dark-blue);
+                        font-size: 2rem;
+                        font-family: "Nunito", sans-serif;
+                        font-weight: 900;
+                        line-height: 120%;
+                        text-transform: uppercase;
+                    }
+
+                    p{
+                        width:90%;
+                        color: var(--gray);
+                        font-size: 1.4rem;
+                        line-height: 140%;
+                        font-family: "Roboto", sans-serif;
+                        @include line-clamp(3, 140%);
+                    }
+
+                    button{
+                        color: var(--dark-blue);
+                        text-align: center;
+                        font-size: 1.2rem;
+                        font-family: "Nunito", sans-serif;
+                        font-weight: 900;
+                        line-height: 1.4rem;
+                        text-transform: uppercase;
+
+                        background-color: var(--white);
+                        border: none;
+                        padding: 1rem 2rem;
+                        border-radius: 2rem;
+
+                        cursor: pointer;
+
+                        transition: .3s;
+
+                        &:hover{
+                            transition: .3s;
+                            background-color: var(--dark-blue);
+                            color: var(--white);
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        .discover__container__button{
+            a{
+                background-color: var(--dark-blue);
+
+                svg{
+                    fill: var(--white);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .news{
+        &__container{
+            width: 95%;
+            &__details{
+                row-gap: 4rem;
+                .news-card{
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 960px) {
+    .news{
+        &__container{
+            width: 95%;
+            &__details{
+                row-gap: 4rem;
+                .news-card{
+                    width: 48%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .news{
+        &__container{
+            &__details{
+                flex-direction: column;
+                .news-card{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
