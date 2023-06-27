@@ -20,7 +20,7 @@
 
 
         h3{
-            color: var(--violet);
+            color: var(--orange);
             text-transform: uppercase;
             text-align: center;
         }
@@ -50,6 +50,22 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .galery{
+        &__container{
+            width: 80%;
+            &__details{
+                gap: 1rem;
+                row-gap: 1rem;
+                img{
+                    width: 44%;
+                    
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .galery{
         &__container{
@@ -68,7 +84,7 @@
         &__container{
             width: 95%;
             &__details{
-                row-gap: 4rem;
+                row-gap: 1rem;
                 img{
                     width: 48%;
                 }

@@ -109,6 +109,21 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .accueils{
+        &__container{
+            width: 80%;
+            &__details{
+                gap: 1rem;
+                row-gap: 4rem;
+                .recap_accueil{
+                    width: 23%;
+                }
+            }
+        }
+    }
+}
+
 
 @media screen and (max-width: 1024px) {
     .accueils{
