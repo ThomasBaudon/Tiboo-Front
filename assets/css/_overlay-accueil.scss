@@ -1,0 +1,133 @@
+.overlay-accueil {
+    position: absolute;
+    z-index: 6500;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, .75);
+
+    &__container {
+        width: 80%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #fff;
+        border-radius: .8rem;
+
+        padding: 2rem;
+
+        &__details {
+
+            width: 80%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            /* HEADER */
+            .header,
+            .schedule {
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: .4rem;
+                background-color: var(--violet);
+                color: var(--white);
+
+                margin-bottom: 1rem;
+                padding: 2rem;
+
+                h3 {
+                    color: var(--white);
+                    text-transform: uppercase;
+                    letter-spacing: .2rem;
+                    margin-bottom: .8rem;
+                }
+
+                p {
+                    color: var(--white);
+                    margin-bottom: .8rem;
+                    font-weight: 700;
+                    font-size: 1.6rem;
+
+                    &:last-of-type {
+                        margin-bottom: unset;
+                    }
+                }
+            }
+
+            /* SCHEDULE */
+            .schedule {
+                background-color: var(--orange);
+
+                p {
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                }
+            }
+
+            /* ACTIVITIES */
+            .activities {
+                width: 100%;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                .relayings {
+
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 50%;
+
+                    border-radius: .4rem;
+                    background-color: var(--dark-white);
+                    border: 1px solid red;
+                    padding: 1rem;
+
+                    &__container {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        h3{
+                            text-align: center;
+                            color: var(--violet);
+                            text-transform: uppercase;
+                            font-size: 2.4rem;
+                            margin-bottom: 1rem;
+                        }
+
+                        .lines {
+                            .hour {}
+
+                            .label {}
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+
+
+    }
+}
