@@ -1,32 +1,40 @@
 .overlay-accueil {
-    position: absolute;
-    z-index: 6500;
+    display: none;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: fixed;
+    z-index: 65000;
 
     width: 100%;
-    height: 100vh;
+    height: 100%;
 
     background-color: rgba(0, 0, 0, .75);
 
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    animation-name: fadein;
+    animation-duration: .3s;
+    animation-timing-function: ease-in;
+
+
     &__container {
-        width: 80%;
+        position: relative;
+        width: 70%;
 
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        background-color: #fff;
+        background-color: var(--white);
         border-radius: .8rem;
 
         padding: 2rem;
 
+
         &__details {
 
-            width: 80%;
+            width: 100%;
 
             display: flex;
             flex-direction: column;
@@ -67,6 +75,27 @@
                         margin-bottom: unset;
                     }
                 }
+
+                .firstname {
+                    font-size: 2rem;
+                    letter-spacing: .2rem;
+                }
+
+                .date {
+                    color: var(--jaune);
+                    font-weight: 400;
+                }
+            }
+
+            .header{
+                position: relative;
+                .close-btn{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: unset;
+                    font-size: 1.6rem;
+                }
             }
 
             /* SCHEDULE */
@@ -84,21 +113,22 @@
                 width: 100%;
 
                 display: flex;
-                justify-content: center;
-                align-items: center;
+                justify-content: flex-start;
+                flex-wrap: wrap;
                 gap: 1rem;
+
+                margin-bottom: 1rem;
 
                 .relayings {
 
                     display: flex;
                     justify-content: flex-start;
-                    align-items: center;
-                    width: 50%;
+                    align-items: flex-start;
+                    width: 48%;
 
                     border-radius: .4rem;
                     background-color: var(--dark-white);
-                    border: 1px solid red;
-                    padding: 1rem;
+                    padding: 1.6rem;
 
                     &__container {
                         width: 100%;
@@ -106,22 +136,82 @@
                         flex-direction: column;
                         justify-content: flex-start;
                         align-items: center;
+                        padding: 1rem;
 
-                        h3{
+                        h3 {
                             text-align: center;
                             color: var(--violet);
                             text-transform: uppercase;
-                            font-size: 2.4rem;
+                            font-size: 2rem;
+                            font-weight: 700;
                             margin-bottom: 1rem;
                         }
 
                         .lines {
-                            .hour {}
+                            width: 100%;
+                            display: flex;
+                            justify-content: flex-start;
+                            flex-wrap: wrap;
+                            border-radius: .4rem;
+                            overflow: hidden;
 
-                            .label {}
+                            margin-bottom: 1rem;
+
+                            &:last-of-type {
+                                margin-bottom: unset;
+                            }
+
+                            .hour {
+                                width: 20%;
+                                padding: 1rem;
+
+                                background-color: var(--jaune);
+                                font-size: 1.4rem;
+                                font-weight: 700;
+                                text-align: center;
+                                color: var(--white);
+                            }
+
+                            .label {
+                                width: 80%;
+                                text-align: left;
+                                background-color: var(--white);
+                                padding: 1rem;
+                                font-size: 1.4rem;
+                                color: var(--gray);
+                            }
+
+                            .commentary {
+                                width: 100%;
+                                background-color: var(--light-yellow);
+                                padding: 1rem;
+                                text-align: center;
+                                font-size: 1.2rem;
+                                color: var(--gray);
+                            }
                         }
                     }
 
+                }
+
+            }
+
+            .close-btn {
+                width: 100%;
+                background-color: var(--violet);
+                border: unset;
+                border-radius: .4rem;
+                padding: 1rem;
+                text-transform: uppercase;
+                color: var(--white);
+                font-weight: 700;
+                text-align: center;
+                cursor: pointer;
+
+                svg {
+                    path {
+                        fill: var(--white);
+                    }
                 }
 
             }
@@ -129,5 +219,84 @@
 
 
 
+    }
+}
+
+.overlay-accueil.active {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+@media screen and (max-width: 960px) {
+    .overlay-accueil {
+        &__container {
+            width: 85%;
+
+            &__details {
+                .activities {
+                    .relayings {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .overlay-accueil {
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        &__container {
+            width: 100%;
+            background-color: unset;
+
+            &__details {
+                .activities {
+                    .relayings {
+                        width: 100%;
+                        padding: .8rem;
+
+                        &__container {
+                            padding: unset;
+
+                            .lines {
+                                .label {
+                                    padding: .6rem;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* KEYFRAMES */
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fromTop {
+    0% {
+        top: -100%
+    }
+
+    100% {
+        top: 0;
     }
 }
