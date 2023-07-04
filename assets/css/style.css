@@ -161,6 +161,7 @@ sup {
   --white: #fff;
   --red: hsl(0, 84%, 63%);
   --green: hsl(101, 50%, 72%);
+  --dark-green: hsl(101, 18%, 52%);
 }
 
 .violet {
@@ -3333,13 +3334,13 @@ footer .sub-footer a {
     top: 0;
   }
 }
-.absence {
+.absence, .exception {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.absence__container {
+.absence__container, .exception__container {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -3350,12 +3351,15 @@ footer .sub-footer a {
   border-radius: 0.8rem;
   background: linear-gradient(314deg, #F4DCE1 0%, #EEF9FF 98.21%);
 }
-.absence__container h3 {
-  color: var(--violet);
+.absence__container h3, .exception__container h3 {
+  color: var(--orange);
   text-transform: uppercase;
   text-align: center;
 }
-.absence__container__details {
+.absence__container p, .exception__container p {
+  width: 80%;
+}
+.absence__container__details, .exception__container__details {
   width: 80%;
   display: flex;
   justify-content: center;
@@ -3363,17 +3367,17 @@ footer .sub-footer a {
   flex-wrap: wrap;
   gap: 1.6rem;
 }
-.absence__container__details #select_absence {
+.absence__container__details #select_absence, .absence__container__details #select_exception, .exception__container__details #select_absence, .exception__container__details #select_exception {
   width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 2rem;
 }
-.absence__container__details #select_absence select, .absence__container__details #select_absence input[type=submit] {
+.absence__container__details #select_absence select, .absence__container__details #select_absence input[type=submit], .absence__container__details #select_exception select, .absence__container__details #select_exception input[type=submit], .exception__container__details #select_absence select, .exception__container__details #select_absence input[type=submit], .exception__container__details #select_exception select, .exception__container__details #select_exception input[type=submit] {
   cursor: pointer;
 }
-.absence__container__details #select_absence #children {
+.absence__container__details #select_absence #children, .absence__container__details #select_exception #children, .exception__container__details #select_absence #children, .exception__container__details #select_exception #children {
   font-size: 1.4rem;
   font-family: Nunito;
   font-weight: 900;
@@ -3387,20 +3391,20 @@ footer .sub-footer a {
   height: 100%;
   border-right: 1rem solid transparent;
 }
-.absence__container__details #select_absence .input_container {
+.absence__container__details #select_absence .input_container, .absence__container__details #select_exception .input_container, .exception__container__details #select_absence .input_container, .exception__container__details #select_exception .input_container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
-.absence__container__details #select_absence .input_container label {
+.absence__container__details #select_absence .input_container label, .absence__container__details #select_exception .input_container label, .exception__container__details #select_absence .input_container label, .exception__container__details #select_exception .input_container label {
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   font-size: 1.2rem;
   color: var(--gray);
   margin-bottom: 0.8rem;
 }
-.absence__container__details #select_absence .input_container input {
+.absence__container__details #select_absence .input_container input, .absence__container__details #select_exception .input_container input, .exception__container__details #select_absence .input_container input, .exception__container__details #select_exception .input_container input {
   width: 100%;
   padding: 1rem;
   font-family: "Roboto", sans-serif;
@@ -3410,10 +3414,10 @@ footer .sub-footer a {
   border: unset;
   border-radius: 0.4rem;
 }
-.absence__container__details #select_absence .input_container input:focus-visible {
+.absence__container__details #select_absence .input_container input:focus-visible, .absence__container__details #select_exception .input_container input:focus-visible, .exception__container__details #select_absence .input_container input:focus-visible, .exception__container__details #select_exception .input_container input:focus-visible {
   outline: none;
 }
-.absence__container__details #select_absence .input_container input[type=date]::-webkit-calendar-picker-indicator {
+.absence__container__details #select_absence .input_container input[type=date]::-webkit-calendar-picker-indicator, .absence__container__details #select_exception .input_container input[type=date]::-webkit-calendar-picker-indicator, .exception__container__details #select_absence .input_container input[type=date]::-webkit-calendar-picker-indicator, .exception__container__details #select_exception .input_container input[type=date]::-webkit-calendar-picker-indicator {
   color: rgba(0, 0, 0, 0);
   opacity: 1;
   display: block;
@@ -3423,7 +3427,7 @@ footer .sub-footer a {
   height: 1.2rem;
   border-width: none;
 }
-.absence__container__details #select_absence .input_container input[type=time]::-webkit-calendar-picker-indicator {
+.absence__container__details #select_absence .input_container input[type=time]::-webkit-calendar-picker-indicator, .absence__container__details #select_exception .input_container input[type=time]::-webkit-calendar-picker-indicator, .exception__container__details #select_absence .input_container input[type=time]::-webkit-calendar-picker-indicator, .exception__container__details #select_exception .input_container input[type=time]::-webkit-calendar-picker-indicator {
   color: rgba(0, 0, 0, 0);
   opacity: 1;
   display: block;
@@ -3433,7 +3437,7 @@ footer .sub-footer a {
   height: 1.2rem;
   border-width: none;
 }
-.absence__container__details #select_absence .input_container select {
+.absence__container__details #select_absence .input_container select, .absence__container__details #select_exception .input_container select, .exception__container__details #select_absence .input_container select, .exception__container__details #select_exception .input_container select {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
@@ -3446,10 +3450,10 @@ footer .sub-footer a {
   height: 100%;
   border-right: 1rem solid transparent;
 }
-.absence__container__details #select_absence .input_container select:focus-visible {
+.absence__container__details #select_absence .input_container select:focus-visible, .absence__container__details #select_exception .input_container select:focus-visible, .exception__container__details #select_absence .input_container select:focus-visible, .exception__container__details #select_exception .input_container select:focus-visible {
   outline: none;
 }
-.absence__container__details #select_absence .input_container textarea {
+.absence__container__details #select_absence .input_container textarea, .absence__container__details #select_exception .input_container textarea, .exception__container__details #select_absence .input_container textarea, .exception__container__details #select_exception .input_container textarea {
   width: 100%;
   min-height: 15rem;
   border: unset;
@@ -3460,23 +3464,23 @@ footer .sub-footer a {
   border-radius: 0.4rem;
   padding: 1rem;
 }
-.absence__container__details #select_absence .input_container textarea::first-letter {
+.absence__container__details #select_absence .input_container textarea::first-letter, .absence__container__details #select_exception .input_container textarea::first-letter, .exception__container__details #select_absence .input_container textarea::first-letter, .exception__container__details #select_exception .input_container textarea::first-letter {
   text-transform: uppercase;
 }
-.absence__container__details #select_absence .input_container textarea::placeholder {
+.absence__container__details #select_absence .input_container textarea::placeholder, .absence__container__details #select_exception .input_container textarea::placeholder, .exception__container__details #select_absence .input_container textarea::placeholder, .exception__container__details #select_exception .input_container textarea::placeholder {
   color: var(--light-gray);
 }
-.absence__container__details #select_absence .input_container textarea:focus-visible {
+.absence__container__details #select_absence .input_container textarea:focus-visible, .absence__container__details #select_exception .input_container textarea:focus-visible, .exception__container__details #select_absence .input_container textarea:focus-visible, .exception__container__details #select_exception .input_container textarea:focus-visible {
   outline: none;
 }
-.absence__container__details #select_absence .checkbox-container {
+.absence__container__details #select_absence .checkbox-container, .absence__container__details #select_exception .checkbox-container, .exception__container__details #select_absence .checkbox-container, .exception__container__details #select_exception .checkbox-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
 }
-.absence__container__details #select_absence .checkbox-container input[type=checkbox i] {
+.absence__container__details #select_absence .checkbox-container input[type=checkbox i], .absence__container__details #select_exception .checkbox-container input[type=checkbox i], .exception__container__details #select_absence .checkbox-container input[type=checkbox i], .exception__container__details #select_exception .checkbox-container input[type=checkbox i] {
   width: unset;
   border: none;
   margin-top: 0;
@@ -3487,14 +3491,14 @@ footer .sub-footer a {
   width: 2rem;
   height: 2rem;
 }
-.absence__container__details #select_absence .checkbox-container label {
+.absence__container__details #select_absence .checkbox-container label, .absence__container__details #select_exception .checkbox-container label, .exception__container__details #select_absence .checkbox-container label, .exception__container__details #select_exception .checkbox-container label {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 2rem;
   margin-bottom: 0;
 }
-.absence__container__details #select_absence input[type=submit] {
+.absence__container__details #select_absence input[type=submit], .absence__container__details #select_exception input[type=submit], .exception__container__details #select_absence input[type=submit], .exception__container__details #select_exception input[type=submit] {
   align-self: center;
   font-family: "Nunito", sans-serif;
   border: unset;
@@ -3508,6 +3512,90 @@ footer .sub-footer a {
   width: 50%;
 }
 
+.exception__container h3 {
+  color: var(--dark-green);
+}
+.exception__container__details {
+  width: 90%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  gap: 2rem;
+}
+.exception__container__details #select_exception {
+  width: 48%;
+}
+.exception__container__details .recap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  width: 48%;
+  background-color: var(--white);
+  border-radius: 0.8rem;
+  padding: 2rem;
+  gap: 2rem;
+}
+.exception__container__details .recap h4, .exception__container__details .recap p {
+  width: 100%;
+  text-align: center;
+}
+.exception__container__details .recap h4 {
+  color: var(--dark-green);
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.exception__container__details .recap__asks {
+  width: 100%;
+}
+.exception__container__details .recap__asks thead tr {
+  background-color: var(--dark-green);
+}
+.exception__container__details .recap__asks thead tr th {
+  color: var(--white);
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+}
+.exception__container__details .recap__asks tbody tr {
+  border-bottom: 1px dashed var(--light-gray);
+}
+.exception__container__details .recap__asks tbody tr td {
+  color: var(--gray);
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 1rem;
+  text-align: center;
+}
+.exception__container__details .recap__asks tbody tr .accepted {
+  color: var(--dark-green);
+}
+.exception__container__details .recap__asks tbody tr .rejected {
+  color: var(--red);
+}
+
+@media screen and (min-width: 1600px) {
+  .exception__container h3, .exception__container p {
+    width: 70%;
+    line-height: 140%;
+  }
+  .exception__container h3 {
+    font-size: 4rem;
+  }
+  .exception__container p {
+    font-size: 2rem;
+  }
+  .exception__container__details {
+    width: 70%;
+  }
+}
 @media screen and (max-width: 960px) {
   .absence__container {
     width: 95%;
@@ -3517,6 +3605,21 @@ footer .sub-footer a {
   }
   .absence__container__details #select_absence {
     width: 100%;
+  }
+  .exception__container {
+    width: 95%;
+  }
+  .exception__container__details {
+    width: 90%;
+  }
+  .exception__container__details #select_exception {
+    width: 100%;
+  }
+  .exception__container__details .recap {
+    width: 100%;
+  }
+  .exception__container__details .recap .table {
+    overflow-x: auto;
   }
 }
 @media screen and (max-width: 575px) {
@@ -3528,5 +3631,14 @@ footer .sub-footer a {
   }
   .absence__container__details #select_absence {
     width: 100%;
+  }
+  .exception__container {
+    width: 95%;
+  }
+  .exception__container h3, .exception__container p {
+    width: 90%;
+  }
+  .exception__container p {
+    text-align: justify;
   }
 }

@@ -1,4 +1,4 @@
-.absence{
+.absence, .exception{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -18,9 +18,13 @@
 
 
         h3{
-            color: var(--violet);
+            color: var(--orange);
             text-transform: uppercase;
             text-align: center;
+        }
+
+        p{
+            width: 80%;
         }
 
         &__details{
@@ -32,7 +36,7 @@
             flex-wrap: wrap;
             gap: 1.6rem;
 
-            #select_absence{
+            #select_absence, #select_exception{
                 width: 70%;
                 display: flex;
                 flex-direction: column;
@@ -214,6 +218,111 @@
     }
 }
 
+.exception{
+    &__container{
+        h3{
+            color: var(--dark-green);
+        }
+       &__details{
+        width: 90%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch;
+        gap: 2rem;
+
+        #select_exception{
+            width: 48%;
+        }
+        .recap{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+            align-content: stretch;
+
+            width: 48%;
+            background-color: var(--white);
+            border-radius: .8rem;
+            padding: 2rem;
+            gap: 2rem;
+
+            h4, p{
+                width: 100%;
+                text-align: center;
+            }
+
+            h4{
+                color: var(--dark-green);
+                text-transform: uppercase;
+                font-weight: 900;
+            }
+
+            &__asks{
+                width: 100%;
+                
+                thead{
+                    tr{
+                        background-color: var(--dark-green);
+                        th{
+                            color: var(--white);
+                            font-family: "Nunito", sans-serif;
+                            font-size: 1.2rem;
+                            font-weight: 900;
+                            text-transform: uppercase;
+                            text-align: center;
+                            padding: 1rem;
+                        }
+                    }
+                }
+
+                tbody{
+                    tr{
+                        border-bottom: 1px dashed var(--light-gray);
+                        td{
+                            color: var(--gray);
+                            font-family: "Roboto", sans-serif;
+                            font-size: 1.2rem;
+                            font-weight: 400;
+                            padding: 1rem;
+                            text-align: center;
+                        }
+
+                        .accepted{
+                            color: var(--dark-green);
+                        }
+                        .rejected{
+                            color: var(--red);
+                        }
+                    }
+                }
+            }
+        }
+       }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .exception{
+        &__container{
+            h3, p{
+                width: 70%;
+                line-height: 140%;
+            }
+            h3{
+                font-size: 4rem;
+            }
+            p{
+                font-size: 2rem;
+            }
+
+            &__details{
+                width: 70%;
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 960px) {
     .absence{
@@ -223,6 +332,23 @@
                 width: 90%;
                 #select_absence{
                     width: 100%;
+                }
+            }
+        }
+    }
+    .exception{
+        &__container{
+            width: 95%;
+            &__details{
+                width: 90%;
+                #select_exception{
+                    width: 100%;
+                }
+                .recap{
+                    width: 100%;
+                    .table{
+                        overflow-x: auto;
+                    }
                 }
             }
         }
@@ -238,6 +364,18 @@
                 #select_absence{
                     width: 100%;
                 }
+            }
+        }
+    }
+
+    .exception{
+        &__container{
+            width: 95%;
+            h3, p{
+                width: 90%;
+            }
+            p{
+                text-align: justify;
             }
         }
     }
