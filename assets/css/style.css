@@ -2807,6 +2807,18 @@ footer .sub-footer a {
   width: 23%;
   border-radius: 0.8rem;
 }
+.galery__container .complete-galery {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.galery__container .complete-galery img {
+  width: 23%;
+  border-radius: 0.8rem;
+}
 .galery__container .discover__container__button a svg {
   fill: var(--white);
 }
@@ -3349,7 +3361,7 @@ footer .sub-footer a {
   gap: 4rem;
   padding: 6.4rem 0;
   border-radius: 0.8rem;
-  background: linear-gradient(314deg, #F4DCE1 0%, #EEF9FF 98.21%);
+  background: linear-gradient(314deg, #FFF9EA 0%, #EEF9FF 100%);
 }
 .absence__container h3, .exception__container h3 {
   color: var(--orange);
@@ -3390,6 +3402,9 @@ footer .sub-footer a {
   width: 100%;
   height: 100%;
   border-right: 1rem solid transparent;
+}
+.absence__container__details #select_absence #children:focus-visible, .absence__container__details #select_exception #children:focus-visible, .exception__container__details #select_absence #children:focus-visible, .exception__container__details #select_exception #children:focus-visible {
+  outline: unset;
 }
 .absence__container__details #select_absence .input_container, .absence__container__details #select_exception .input_container, .exception__container__details #select_absence .input_container, .exception__container__details #select_exception .input_container {
   display: flex;
