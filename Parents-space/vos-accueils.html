@@ -9,6 +9,107 @@
 </head>
 <body>
 
+<section class="overlay-accueil" id="overlay-accueil">
+    <div class="overlay-accueil__container">
+        <div class="overlay-accueil__container__details">
+
+            <!-- header overlay -->
+            <div class="header">
+                <a href="#" class="close-btn">&times;</a>
+                <h3 class="accueil">Accueils</h3>
+                <p class="firstname">Mathias</p>
+                <p class="date">le 28/06/2023</p>
+            </div>
+
+            <!-- Schedule overlay -->
+            <div class="schedule">
+                <p class="schedule__details">De 09h33 à 17h30</p>
+            </div>
+
+            <!-- Activities overlay -->
+            <div class="activities">
+
+                <!-- CHANGES -->
+                <div class="relayings change" id="change">
+                    <div class="relayings__container change__details">
+                        <h3>Change(s)</h3>
+
+                        <!-- lines -->
+                        <div class="lines">
+                            <div class="hour">11h15</div>
+                            <div class="label">Pipi</div>
+                        </div>
+                        <div class="lines">
+                            <div class="hour">13h36</div>
+                            <div class="label">Selles normales</div>
+                        </div>
+                        <div class="lines">
+                            <div class="hour">15h15</div>
+                            <div class="label">Couche sèche</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- REPAS -->
+                <div class="relayings repas" id="repas">
+                    <div class="relayings__container repas__details">
+                        <h3>Repas</h3>
+
+                        <!-- lines -->
+                        <div class="lines">
+                            <div class="hour">11h40</div>
+                            <div class="label"> <strong>Déjeuner :</strong>&nbsp;a peu mangé</div>
+                            <div class="commentary">5 cuillères de purée pomme de terre petit pois et yaourt</div>
+                        </div>
+                        <!-- lines -->
+                        <div class="lines">
+                            <div class="hour">15h20</div>
+                            <div class="label"> <strong>Goûter :</strong>&nbsp;n'a pas tout mangé</div>
+                            <div class="commentary">2 cuillères de yaourt</div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- SIESTE -->
+                <div class="relayings sieste" id="sieste">
+                    <div class="relayings__container sieste__details">
+                        <h3>Sieste(s)</h3>
+
+                        <!-- lines -->
+                        <div class="lines">
+                            <div class="hour">10h56</div>
+                            <div class="label">jusqu'à 11h36. Soit <strong>&nbsp;0 h et 40 min</strong>.</div>
+                        </div>
+                        <div class="lines">
+                            <div class="hour">12h40</div>
+                            <div class="label">jusqu'à 11h36. Soit <strong>&nbsp;0 h et 40 min</strong>.</div>
+                        </div>
+                        <div class="lines">
+                            <div class="hour">14h40</div>
+                            <div class="label">jusqu'à 11h36. Soit <strong>&nbsp;0 h et 40 min</strong>.</div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- CLOSE OVERLAY -->
+            <button class="close-btn">
+                Retour aux accueils &nbsp;
+                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.29289 0.292893C5.68342 -0.0976311 6.31658 -0.0976311 6.70711 0.292893L11.7071 5.29289C12.0976 5.68342 12.0976 6.31658 11.7071 6.70711L6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071C4.90237 11.3166 4.90237 10.6834 5.29289 10.2929L8.58579 7H1C0.447715 7 0 6.55228 0 6C0 5.44772 0.447715 5 1 5H8.58579L5.29289 1.70711C4.90237 1.31658 4.90237 0.683417 5.29289 0.292893Z"/>
+                </svg>
+            </button>
+
+        </div>
+    </div>
+</section>
+
 <!-- BURGER MENU -->
 <a class="menu-trigger" href="#">
     <span></span>
@@ -30,23 +131,23 @@
                 <li><a href="index.html">Mon accueil</a></li>
 
                 <li>
-                    <a href="fonctionnalites.html">Mon compte</a>
+                    <a href="#">Mon compte</a>
                     <div class="submenu">
                         <ul>
                             <li><a href="#">Mes infos</a></li>
                             <li><a href="#">Mes documents</a></li>
                             <li><a href="#">Transmettre</a></li>
-                            <li><a href="#">Factures & contrats</a></li>
+                            <li><a href="factures-et-contrats.html">Factures & contrats</a></li>
                         </ul>
                     </div>
                 
                 </li>
                 <li>
-                    <a href="pour-qui.html">Mon quotidien</a>
+                    <a href="#">Mon quotidien</a>
                     <div class="submenu">
                         <ul>
                             <li><a href="#">Repas</a></li>
-                            <li><a href="#">Galerie</a></li>
+                            <li><a href="galerie-photos.html">Galerie</a></li>
                             <li><a href="#">Transmissions</a></li>
                             <li><a href="#">Annonces</a></li>
                         </ul>
@@ -54,12 +155,12 @@
                 </li>
 
                 <li>
-                    <a href="tarifs.html">Mon organisation</a>
+                    <a href="#">Mon organisation</a>
                     <div class="submenu">
                         <ul>
                             <li><a href="vos-accueils.html">Récapitulatif accueils</a></li>
-                            <li><a href="#">Absences</a></li>
-                            <li><a href="#">Accueils Occasionnels</a></li>
+                            <li><a href="prevenir-absence.html">Absences</a></li>
+                            <li><a href="accueil-exceptionnel.html">Accueils Occasionnels</a></li>
                         </ul>
                     </div>
                 </li>
@@ -135,116 +236,103 @@
         </div>
     </div>
 </section>
-
 <!-- VOS ACCUEILS -->
 <section class="accueils" id="accueils">
     <div class="accueils__container">
-        <h3>Vos derniers accueils</h3>
+        <h3>Vos accueils</h3>
 
         <div class="accueils__container__details">
 
-            <a href="#" class="recap_accueil">
-                <img src="../assets/img/child-avatar.jpg" alt="child avatar" class="avatar">
-                <h4>Prénom</h4>
-                <div class="recap_accueil__details">
+        <form action="#" id="select_accueil">
 
-                    <div class="line">
-                        <img src="../assets/img/🦆 icon _calendar_.svg" alt="Calendar">
-                        <p>date</p>
+            <!-- SELECT CHILD -->
+            <select name="children" id="children">
+                <option value=""> Nom & prénom de l'enfant</option>
+                <option value="Mathias Baudon-Nevens">Mathias Baudon-Nevens</option>
+                <option value="Anaïs Baudon">Anaïs Baudon</option>
+            </select>
+
+            <!-- SELECT MONTH -->
+            <select name="months" id="months">
+                <option value=""> Mois</option>
+                <option value="Janvier 2023">Janvier 2023</option>
+                <option value="Février 2023">Février 2023</option>
+                <option value="Mars 2023">Mars 2023</option>
+                <option value="Avril 2023">Avril 2023</option>
+                <option value="Mai 2023">Mai 2023</option>
+                <option value="Juin 2023">Juin 2023</option>
+                <option value="Juillet 2023">Juillet 2023</option>
+                <option value="Août 2023">Août 2023</option>
+                <option value="Septembre 2023">Septembre 2023</option>
+                <option value="Octobre 2023">Octobre 2023</option>
+                <option value="Novembre 2023">Novembre 2023</option>
+                <option value="Décembre 2023">Décembre 2023</option>
+            </select>
+
+            <input type="submit" value="Valider">
+
+
+        </form>
+
+        <div class="list-accueils">
+            <div class="details-accueil">
+                
+                <div class="statement">
+                    <!-- date -->
+                    <div class="statement__details date">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="&#240;&#159;&#166;&#134; icon &#34;calendar&#34;">
+                            <path id="Vector" d="M11.1053 2.68421V1M11.1053 2.68421V4.36842M11.1053 2.68421H7.31579M1 7.73684V15.3158C1 16.246 1.75405 17 2.68421 17H14.4737C15.4039 17 16.1579 16.246 16.1579 15.3158V7.73684H1Z" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path id="Vector_2" d="M1 7.7372V4.36878C1 3.43862 1.75405 2.68457 2.68421 2.68457H4.36842" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path id="Vector_3" d="M4.36841 1V4.36842" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path id="Vector_4" d="M16.1579 7.7372V4.36878C16.1579 3.43862 15.4039 2.68457 14.4737 2.68457H14.0526" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                        </svg>
+                        <p class="violet">date</p>
                     </div>
-
-                    <div class="line">
-                        <img src="../assets/img/🦆 icon _pin alt_.svg" alt="Location">
-                        <p>lieu</p>
+    
+                    <!-- Location -->
+                    <div class="statement__details location">
+                        <svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="&#240;&#159;&#166;&#134; icon &#34;pin alt&#34;">
+                            <path id="Vector" d="M13.8 7.4C13.8 10.9346 7.4 17 7.4 17C7.4 17 1 10.9346 1 7.4C1 3.86538 3.86538 1 7.4 1C10.9346 1 13.8 3.86538 13.8 7.4Z" stroke="var(--orange)" stroke-width="2"/>
+                            <path id="Vector_2" d="M7.40001 8.19961C7.84185 8.19961 8.20001 7.84145 8.20001 7.39961C8.20001 6.95779 7.84185 6.59961 7.40001 6.59961C6.95817 6.59961 6.60001 6.95779 6.60001 7.39961C6.60001 7.84145 6.95817 8.19961 7.40001 8.19961Z" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                        </svg>
+                        <p class="violet">lieu</p>
                     </div>
-
-                    <div class="line">
-                        <img src="../assets/img/🦆 icon _clock outline_.svg" alt="Clock">
-                        <p>horaires</p>
+    
+                    <!-- schedule -->
+                    <div class="statement__details schedule">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="&#240;&#159;&#166;&#134; icon &#34;clock outline&#34;">
+                            <path id="Vector" d="M9 4.2002V9.0002H13.8" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path id="Vector_2" d="M9 17C13.4182 17 17 13.4182 17 9C17 4.58172 13.4182 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4182 4.58172 17 9 17Z" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                        </svg>
+                            
+                        <p class="violet">horaires</p>
                     </div>
-
                 </div>
-            </a>
 
-            <a href="#" class="recap_accueil">
-                <img src="../assets/img/child-avatar.jpg" alt="child avatar" class="avatar">
-                <h4>Prénom</h4>
-                <div class="recap_accueil__details">
+                <a href="#" class="see-accueil-details">
+                    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.99995 8.77821C9.98181 8.77821 10.7777 7.9823 10.7777 7.00043C10.7777 6.01857 9.98181 5.22266 8.99995 5.22266C8.01808 5.22266 7.22217 6.01857 7.22217 7.00043C7.22217 7.9823 8.01808 8.77821 8.99995 8.77821Z" stroke="#7E3C8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17 7.00033C15.3212 9.65899 12.3052 12.3337 9 12.3337C5.69484 12.3337 2.67872 9.65899 1 7.00033C3.04316 4.47433 5.437 1.66699 9 1.66699C12.563 1.66699 14.9569 4.47428 17 7.00033Z" stroke="#7E3C8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>&nbsp;&nbsp;voir les détails
+                </a>
 
-                    <div class="line">
-                        <img src="../assets/img/🦆 icon _calendar_.svg" alt="Calendar">
-                        <p>date</p>
-                    </div>
-
-                    <div class="line">
-                        <img src="../assets/img/🦆 icon _pin alt_.svg" alt="Location">
-                        <p>lieu</p>
-                    </div>
-
-                    <div class="line">
-                        <img src="../assets/img/🦆 icon _clock outline_.svg" alt="Clock">
-                        <p>horaires</p>
-                    </div>
-
-                </div>
-            </a>
-
-            <a href="#" class="recap_accueil">
-                <img src="../assets/img/child-avatar.jpg" alt="child avatar" class="avatar">
-                <h4>Prénom</h4>
-                <div class="recap_accueil__details">
-
-                    <div class="line">
-                        <img src="../assets/img/🦆 icon _calendar_.svg" alt="Calendar">
-                        <p>date</p>
-                    </div>
-
-                    <div class="line">
-                        <img src="../assets/img/🦆 icon _pin alt_.svg" alt="Location">
-                        <p>lieu</p>
-                    </div>
-
-                    <div class="line">
-                        <img src="../assets/img/🦆 icon _clock outline_.svg" alt="Clock">
-                        <p>horaires</p>
-                    </div>
-
-                </div>
-            </a>
-
-            <a href="#" class="recap_accueil">
-                <img src="../assets/img/child-avatar.jpg" alt="child avatar" class="avatar">
-                <h4>Prénom</h4>
-                <div class="recap_accueil__details">
-
-                    <div class="line">
-                        <img src="../assets/img/🦆 icon _calendar_.svg" alt="Calendar">
-                        <p>date</p>
-                    </div>
-
-                    <div class="line">
-                        <img src="../assets/img/🦆 icon _pin alt_.svg" alt="Location">
-                        <p>lieu</p>
-                    </div>
-
-                    <div class="line">
-                        <img src="../assets/img/🦆 icon _clock outline_.svg" alt="Clock">
-                        <p>horaires</p>
-                    </div>
-
-                </div>
-            </a>
+            </div>
+        </div>
 
         </div>
 
         <div class="discover__container__button">
-            <a href="vos-accueils.html">
-                Voir tous vos accueils
-                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.29289 0.292893C5.68342 -0.0976311 6.31658 -0.0976311 6.70711 0.292893L11.7071 5.29289C12.0976 5.68342 12.0976 6.31658 11.7071 6.70711L6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071C4.90237 11.3166 4.90237 10.6834 5.29289 10.2929L8.58579 7H1C0.447715 7 0 6.55228 0 6C0 5.44772 0.447715 5 1 5H8.58579L5.29289 1.70711C4.90237 1.31658 4.90237 0.683417 5.29289 0.292893Z"/>
-                </svg>
+            <a href="index.html">
+                Retourner à mon accueil
             </a>
         </div>
+
     </div>
 </section>
 
@@ -274,144 +362,8 @@
     </div>
 </section>
 
-<!-- GALERY -->
-<section class="galery" id="galery">
-    <div class="galery__container">
-        <h3>Votre galerie</h3>
-
-        <!-- details -->
-        <div class="galery__container__details">
-
-            <img src="../assets/img/child-avatar.jpg" alt="child avatar">
-            <img src="../assets/img/child-avatar2.jpg" alt="child avatar">
-            <img src="../assets/img/child-avatar3.jpg" alt="child avatar">
-            <img src="../assets/img/child-avatar4.jpg" alt="child avatar">
-
-        </div>
-        <!-- BTN -->
-        <div class="discover__container__button">
-            <a href="galerie-photos.html">
-                Voir toutes les photos
-                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.29289 0.292893C5.68342 -0.0976311 6.31658 -0.0976311 6.70711 0.292893L11.7071 5.29289C12.0976 5.68342 12.0976 6.31658 11.7071 6.70711L6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071C4.90237 11.3166 4.90237 10.6834 5.29289 10.2929L8.58579 7H1C0.447715 7 0 6.55228 0 6C0 5.44772 0.447715 5 1 5H8.58579L5.29289 1.70711C4.90237 1.31658 4.90237 0.683417 5.29289 0.292893Z"/>
-                </svg>
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- BILLS -->
-<section class="bills" id="bills">
-    <div class="bills__container">
-
-        <h3>Mes factures</h3>
-
-        <div class="bills__container__details">
-
-            <a href="#" class="bill--details">
-                <p class="price"> 730 € </p>
-                <p class="date"> Du 01 au 30 juin 2023</p>
-                <button>Voir la facture</button>
-            </a>
-
-            <a href="#" class="bill--details">
-                <p class="price"> 730 € </p>
-                <p class="date"> Du 01 au 30 juin 2023</p>
-                <button>Voir la facture</button>
-            </a>
-
-            <a href="#" class="bill--details">
-                <p class="price"> 730 € </p>
-                <p class="date"> Du 01 au 30 juin 2023</p>
-                <button>Voir la facture</button>
-            </a>
-
-            <a href="#" class="bill--details">
-                <p class="price"> 730 € </p>
-                <p class="date"> Du 01 au 30 juin 2023</p>
-                <button>Voir la facture</button>
-            </a>
-
-        </div>
-
-        <div class="discover__container__button">
-            <a href="#">
-                Voir toutes les factures
-                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.29289 0.292893C5.68342 -0.0976311 6.31658 -0.0976311 6.70711 0.292893L11.7071 5.29289C12.0976 5.68342 12.0976 6.31658 11.7071 6.70711L6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071C4.90237 11.3166 4.90237 10.6834 5.29289 10.2929L8.58579 7H1C0.447715 7 0 6.55228 0 6C0 5.44772 0.447715 5 1 5H8.58579L5.29289 1.70711C4.90237 1.31658 4.90237 0.683417 5.29289 0.292893Z"/>
-                </svg>
-            </a>
-        </div>
-
-    </div>
-</section>
-
-<!-- News -->
-<section class="news" id="news">
-    <div class="news__container">
-        <h3>Nos actualités</h3>
-
-        <!-- news container -->
-        <div class="news__container__details">
-
-            <!-- CARDS -->
-            <a href="#" class="news-card">
-                <img src="../assets/img/galery-photos-squared.jpg" alt="news image 1">
-
-                <div class="news-card__body">
-                    <h5>Title</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dolor laboriosam, cupiditate dignissimos quaerat praesentium, maiores quibusdam deserunt officia voluptatem maxime beatae tempore numquam necessitatibus blanditiis exercitationem similique ad repellat.</p>
-                    <button>
-                        Lire la suite
-                    </button>
-                </div>
-            </a>
-
-            <!-- CARDS -->
-            <a href="#" class="news-card">
-                <img src="../assets/img/galery-photos-squared.jpg" alt="news image 1">
-
-                <div class="news-card__body">
-                    <h5>Title</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dolor laboriosam, cupiditate dignissimos quaerat praesentium, maiores quibusdam deserunt officia voluptatem maxime beatae tempore numquam necessitatibus blanditiis exercitationem similique ad repellat.</p>
-                    <button>
-                        Lire la suite
-                    </button>
-                </div>
-            </a>
-
-            <!-- CARDS -->
-            <a href="#" class="news-card">
-                <img src="../assets/img/galery-photos-squared.jpg" alt="news image 1">
-
-                <div class="news-card__body">
-                    <h5>Title</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dolor laboriosam, cupiditate dignissimos quaerat praesentium, maiores quibusdam deserunt officia voluptatem maxime beatae tempore numquam necessitatibus blanditiis exercitationem similique ad repellat.</p>
-                    <button>
-                        Lire la suite
-                    </button>
-                </div>
-            </a>
-
-            
-
-
-        </div>
-
-        <!-- BTN -->
-        <div class="discover__container__button">
-            <a href="#">
-               Voir toutes les actualités
-                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.29289 0.292893C5.68342 -0.0976311 6.31658 -0.0976311 6.70711 0.292893L11.7071 5.29289C12.0976 5.68342 12.0976 6.31658 11.7071 6.70711L6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071C4.90237 11.3166 4.90237 10.6834 5.29289 10.2929L8.58579 7H1C0.447715 7 0 6.55228 0 6C0 5.44772 0.447715 5 1 5H8.58579L5.29289 1.70711C4.90237 1.31658 4.90237 0.683417 5.29289 0.292893Z"/>
-                </svg>
-            </a>
-        </div>
-    </div>
-</section>
 
 <!-- FOOTER -->
-
 <footer>
     <div class="main-footer">
         <img src="../assets/img/logo-TIBOO-header.svg" alt="TiBoo">

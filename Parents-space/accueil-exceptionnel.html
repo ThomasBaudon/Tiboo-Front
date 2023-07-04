@@ -30,23 +30,23 @@
                 <li><a href="index.html">Mon accueil</a></li>
 
                 <li>
-                    <a href="fonctionnalites.html">Mon compte</a>
+                    <a href="#">Mon compte</a>
                     <div class="submenu">
                         <ul>
                             <li><a href="#">Mes infos</a></li>
                             <li><a href="#">Mes documents</a></li>
                             <li><a href="#">Transmettre</a></li>
-                            <li><a href="#">Factures & contrats</a></li>
+                            <li><a href="factures-et-contrats.html">Factures & contrats</a></li>
                         </ul>
                     </div>
                 
                 </li>
                 <li>
-                    <a href="pour-qui.html">Mon quotidien</a>
+                    <a href="#">Mon quotidien</a>
                     <div class="submenu">
                         <ul>
                             <li><a href="#">Repas</a></li>
-                            <li><a href="#">Galerie</a></li>
+                            <li><a href="galerie-photos.html">Galerie</a></li>
                             <li><a href="#">Transmissions</a></li>
                             <li><a href="#">Annonces</a></li>
                         </ul>
@@ -54,12 +54,12 @@
                 </li>
 
                 <li>
-                    <a href="tarifs.html">Mon organisation</a>
+                    <a href="#">Mon organisation</a>
                     <div class="submenu">
                         <ul>
                             <li><a href="vos-accueils.html">Récapitulatif accueils</a></li>
-                            <li><a href="#">Absences</a></li>
-                            <li><a href="#">Accueils Occasionnels</a></li>
+                            <li><a href="prevenir-absence.html">Absences</a></li>
+                            <li><a href="accueil-exceptionnel.html">Accueils Occasionnels</a></li>
                         </ul>
                     </div>
                 </li>
@@ -137,13 +137,15 @@
 </section>
 
 <!-- Prévenir d’une absence -->
-<section class="absence" id="absence">
-    <div class="absence__container">
-        <h3>Prévenir d’une absence</h3>
+<section class="exception" id="exception">
+    <div class="exception__container">
+        <h3>demander un accueil exceptionnel</h3>
 
-        <div class="absence__container__details">
+        <p>Les demandes d’accueil occasionnel passées depuis votre espace personnel sont transmises instantanément à nos équipes. Vous obtiendrez une réponse rapidement par mail ainsi que dans cet espace. Pour plus de renseignements, n'hésitez pas à nous contacter directement.</p>
 
-            <form action="#" id="select_absence">
+        <div class="exception__container__details">
+
+            <form action="#" id="select_exception">
 
                 <!-- SELECT CHILD -->
                 <select name="children" id="children">
@@ -155,32 +157,15 @@
                 <!-- First day of absence -->
                 <div class="input_container">
                     <label for="first-day">
-                        Premier jour d’absence
+                        Date de garde souhaitée
                     </label>
                     <input type="date" name="first-day" id="first-day">
-                </div>
-
-                <!-- Last day of absence -->
-                <div class="input_container">
-                    <label for="last-day">
-                        Dernier jour d’absence
-                    </label>
-                    <input type="date" name="last-day" id="last-day">
-                </div>
-
-                <!-- SELECT CHILD -->
-                <div class="input_container">
-                    <label for="type-of-absence">Type de l'absence</label>
-                    <select name="type-of-absence" id="type-of-absence">
-                        <option value="complete">L'absence sera effective pour toute le journée</option>
-                        <option value="partial">L'absence sera effective sur une partie de la journée seulement</option>
-                    </select>
                 </div>
 
                 <!-- IF partial -> start time at... -->
                 <div class="input_container">
                     <label for="begin-time">
-                        Heure de début d'absence
+                        Heure de début de garde souhaitée
                     </label>
                     <input type="time" name="begin-time" id="begin-time">
                 </div>
@@ -188,14 +173,14 @@
                 <!-- IF partial -> end time at... -->
                 <div class="input_container">
                     <label for="end-time">
-                        Heure de fin d'absence
+                        Heure de fin de garde souhaitée
                     </label>
                     <input type="time" name="end-time" id="end-time">
                 </div>
 
                 <!-- Justification Textarea -->
                 <div class="input_container">
-                    <label for="justification">Justification</label>
+                    <label for="justification">Commentaire</label>
                     <textarea name="justification" id="justification" placeholder="Votre justification"></textarea>
                 </div>
 
@@ -209,6 +194,41 @@
                 <input type="submit" value="Envoyer">
 
             </form>
+
+            <div class="recap">
+                <h4>Vos demandes</h4>
+                <p>Vous avez fait X demande(s) pour de l’accueil occasionnel.</p>
+
+                <div class="table">
+                    <table id="recap__asks" class="recap__asks">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Début</th>
+                                <th>Fin</th>
+                                <th>Enfant</th>
+                                <th>Statut</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>30/05/23</td>
+                                <td>12:30</td>
+                                <td>16:30</td>
+                                <td>Mathias</td>
+                                <td class="accepted">Accepté</td>
+                            </tr>
+                            <tr>
+                                <td>30/05/23</td>
+                                <td>12:30</td>
+                                <td>16:30</td>
+                                <td>Mathias</td>
+                                <td class="rejected">Rejeté</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
         </div>
 
