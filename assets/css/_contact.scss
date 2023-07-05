@@ -1,4 +1,4 @@
-.contact, .connexion{
+.contact, .connexion, .transmit{
     margin-top: 3.2rem;
     width: 100%;
     display: flex;
@@ -183,8 +183,68 @@
     }
 }
 
+.transmit{
+    &__container{
+        &__left{
+            background-color: var(--violet);
+            padding: 4rem 2rem;
+
+            form{
+                .input-contact{
+                    border: none;
+                    border-bottom: none;
+                    background-color: var(--white);
+                    border-radius: 1.6rem;
+                    padding-left: 2rem;
+                    color: var(--gray);
+
+                    &::placeholder{
+                        color: var(--gray);
+                        text-transform: unset;
+                    }
+                }
+
+                .inputfile {
+                    width: 0.1px;
+                    height: 0.1px;
+                    opacity: 0;
+                    overflow: hidden;
+                    position: absolute;
+                    z-index: -1;
+                }
+
+                .inputfile + label {
+                    width: 100%;
+                    background-color: var(--white);
+                    border-radius: 1.6rem;
+                    padding: 1rem;
+                    font-size: 1.4em;
+                    font-weight: 900;
+                    color: var(--violet);
+                    display: inline-block;
+                    transition: .3s;
+                }
+                
+                .inputfile + label:hover {
+                    background-color: var(--jaune);
+                    transition: .3s;
+                }
+
+                .inputfile + label {
+                    cursor: pointer; /* "hand" cursor */
+                }
+
+                .inputfile:focus + label {
+                    outline: unset;
+                    outline: unset;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1024px) {
-    .contact, .connexion{
+    .contact, .connexion, .transmit{
         &__container{
             width: 95%;
         &__left{
@@ -199,7 +259,7 @@
 
 
 @media screen and (max-width: 575px) {
-    .contact, .connexion{
+    .contact, .connexion, .transmit{
         &__container{
             width: 95%;
             flex-direction: column;

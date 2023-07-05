@@ -2090,14 +2090,14 @@ footer .sub-footer a {
     width: 100%;
   }
 }
-.contact, .connexion {
+.contact, .connexion, .transmit {
   margin-top: 3.2rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.contact__container, .connexion__container {
+.contact__container, .connexion__container, .transmit__container {
   width: 80%;
   display: flex;
   justify-content: space-between;
@@ -2105,7 +2105,7 @@ footer .sub-footer a {
   align-content: stretch;
   gap: 2rem;
 }
-.contact__container__left, .connexion__container__left {
+.contact__container__left, .connexion__container__left, .transmit__container__left {
   width: 40%;
   padding: 4rem 2rem;
   background-color: var(--blue);
@@ -2115,7 +2115,7 @@ footer .sub-footer a {
   justify-content: center;
   gap: 2rem;
 }
-.contact__container__left h1, .connexion__container__left h1 {
+.contact__container__left h1, .connexion__container__left h1, .transmit__container__left h1 {
   font-family: "Nunito", sans-serif;
   font-style: normal;
   font-weight: 900;
@@ -2128,7 +2128,7 @@ footer .sub-footer a {
   background-clip: text;
   text-fill-color: transparent;
 }
-.contact__container__left h4, .connexion__container__left h4 {
+.contact__container__left h4, .connexion__container__left h4, .transmit__container__left h4 {
   font-family: "Nunito", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -2137,7 +2137,7 @@ footer .sub-footer a {
   text-transform: uppercase;
   color: #FFF6C7;
 }
-.contact__container__left h5, .connexion__container__left h5 {
+.contact__container__left h5, .connexion__container__left h5, .transmit__container__left h5 {
   width: 100%;
   font-family: "Nunito", sans-serif;
   font-style: normal;
@@ -2147,7 +2147,7 @@ footer .sub-footer a {
   text-transform: uppercase;
   color: var(--white);
 }
-.contact__container__left form, .connexion__container__left form {
+.contact__container__left form, .connexion__container__left form, .transmit__container__left form {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -2155,7 +2155,7 @@ footer .sub-footer a {
   align-items: flex-start;
   gap: 2rem;
 }
-.contact__container__left form input, .contact__container__left form textarea, .connexion__container__left form input, .connexion__container__left form textarea {
+.contact__container__left form input, .contact__container__left form textarea, .connexion__container__left form input, .connexion__container__left form textarea, .transmit__container__left form input, .transmit__container__left form textarea {
   width: 100%;
   background-color: transparent;
   border: none;
@@ -2165,27 +2165,27 @@ footer .sub-footer a {
   font-weight: 1.4rem;
   line-height: 130%;
 }
-.contact__container__left form input::placeholder, .contact__container__left form textarea::placeholder, .connexion__container__left form input::placeholder, .connexion__container__left form textarea::placeholder {
+.contact__container__left form input::placeholder, .contact__container__left form textarea::placeholder, .connexion__container__left form input::placeholder, .connexion__container__left form textarea::placeholder, .transmit__container__left form input::placeholder, .transmit__container__left form textarea::placeholder {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   color: var(--white);
 }
-.contact__container__left form input:focus-visible, .contact__container__left form textarea:focus-visible, .connexion__container__left form input:focus-visible, .connexion__container__left form textarea:focus-visible {
+.contact__container__left form input:focus-visible, .contact__container__left form textarea:focus-visible, .connexion__container__left form input:focus-visible, .connexion__container__left form textarea:focus-visible, .transmit__container__left form input:focus-visible, .transmit__container__left form textarea:focus-visible {
   outline: 0px;
 }
-.contact__container__left form .input-contact, .connexion__container__left form .input-contact {
+.contact__container__left form .input-contact, .connexion__container__left form .input-contact, .transmit__container__left form .input-contact {
   padding: 0.8rem 0;
   border-bottom: 1px solid var(--light-blue);
 }
-.contact__container__left form textarea, .connexion__container__left form textarea {
+.contact__container__left form textarea, .connexion__container__left form textarea, .transmit__container__left form textarea {
   height: 10rem;
   min-height: 10rem;
   max-height: 10rem;
   overflow-y: auto;
   resize: none;
 }
-.contact__container__left form input[type=submit], .connexion__container__left form input[type=submit] {
+.contact__container__left form input[type=submit], .connexion__container__left form input[type=submit], .transmit__container__left form input[type=submit] {
   background-color: var(--jaune);
   padding: 0.8rem;
   border-radius: 1.6rem;
@@ -2198,7 +2198,7 @@ footer .sub-footer a {
   text-transform: uppercase;
   color: var(--gray);
 }
-.contact__container__left form p, .connexion__container__left form p {
+.contact__container__left form p, .connexion__container__left form p, .transmit__container__left form p {
   width: 100%;
   display: inline-block;
   font-family: "Roboto", sans-serif;
@@ -2207,18 +2207,18 @@ footer .sub-footer a {
   text-align: center;
   color: var(--white);
 }
-.contact__container__left form p a, .connexion__container__left form p a {
+.contact__container__left form p a, .connexion__container__left form p a, .transmit__container__left form p a {
   font-weight: 700;
   text-decoration: none;
   color: var(--white);
 }
-.contact__container__right, .connexion__container__right {
+.contact__container__right, .connexion__container__right, .transmit__container__right {
   width: 60%;
   background-color: var(--blue);
   border-radius: 0.8rem;
   overflow: hidden;
 }
-.contact__container__right img, .connexion__container__right img {
+.contact__container__right img, .connexion__container__right img, .transmit__container__right img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2244,27 +2244,74 @@ footer .sub-footer a {
   color: var(--white);
 }
 
+.transmit__container__left {
+  background-color: var(--violet);
+  padding: 4rem 2rem;
+}
+.transmit__container__left form .input-contact {
+  border: none;
+  border-bottom: none;
+  background-color: var(--white);
+  border-radius: 1.6rem;
+  padding-left: 2rem;
+  color: var(--gray);
+}
+.transmit__container__left form .input-contact::placeholder {
+  color: var(--gray);
+  text-transform: unset;
+}
+.transmit__container__left form .inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.transmit__container__left form .inputfile + label {
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 1.6rem;
+  padding: 1rem;
+  font-size: 1.4em;
+  font-weight: 900;
+  color: var(--violet);
+  display: inline-block;
+  transition: 0.3s;
+}
+.transmit__container__left form .inputfile + label:hover {
+  background-color: var(--jaune);
+  transition: 0.3s;
+}
+.transmit__container__left form .inputfile + label {
+  cursor: pointer; /* "hand" cursor */
+}
+.transmit__container__left form .inputfile:focus + label {
+  outline: unset;
+  outline: unset;
+}
+
 @media screen and (max-width: 1024px) {
-  .contact__container, .connexion__container {
+  .contact__container, .connexion__container, .transmit__container {
     width: 95%;
   }
-  .contact__container__left, .connexion__container__left {
+  .contact__container__left, .connexion__container__left, .transmit__container__left {
     width: 60%;
   }
-  .contact__container__right, .connexion__container__right {
+  .contact__container__right, .connexion__container__right, .transmit__container__right {
     width: 40%;
   }
 }
 @media screen and (max-width: 575px) {
-  .contact__container, .connexion__container {
+  .contact__container, .connexion__container, .transmit__container {
     width: 95%;
     flex-direction: column;
   }
-  .contact__container__left, .connexion__container__left {
+  .contact__container__left, .connexion__container__left, .transmit__container__left {
     width: 100%;
     padding: 2rem;
   }
-  .contact__container__right, .connexion__container__right {
+  .contact__container__right, .connexion__container__right, .transmit__container__right {
     width: 100%;
     height: 30rem;
   }
